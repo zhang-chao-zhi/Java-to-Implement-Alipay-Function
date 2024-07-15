@@ -1,0 +1,11 @@
+Input SCL PinName [Str]:				PAD_SCL
+Input SDA PinName [Str]:				PAD_SDA
+Selete Pattern add OtherPin [0/1]:			1
+Input OtherPin Name [Str]:				PAD_TEST
+Input OtherPin State [0/1/L/H/X/M]:			0
+Selete Pattern add OtherPin [0/1]:			0
+Input PatternWrite BaudRate [Str]:			100K
+Input PatternRead BaudRate [Str]:			200K
+Selete ReadPattern add ReadData result [0/1]:		1
+Show line Number on the comment [0/1]:			1
+whether vec&sprg&cmt file compress to patfile [0/1]:	1

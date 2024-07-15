@@ -1,0 +1,83 @@
+file_format_version 1.1;
+
+timeset TS_100KHz,TS_100KHz_Start,TS_100KHz_Idle,TS_100KHz_Stop,TS_200KHz,TS_200KHz_Start,TS_200KHz_Idle,TS_200KHz_Stop;
+
+pattern I2C_Example(PAD_SCL,PAD_SDA,PAD_TEST)
+{
+Label_I2C_Example:
+								TS_100KHz_Idle		1 1 0 ;		//line:0,		Updata at 2024.07.15  15:59:29
+								TS_100KHz_Idle		1 1 0 ;		//line:1,		
+repeat(100)						TS_100KHz_Idle		1 1 0 ;		//line:2,		String_write:sa=0x1A,reg=0x1A,data=0xAF
+								TS_100KHz_Start		1 1 0 ;		//line:3,		Start_bit
+								TS_100KHz		1 0 0 ;		//line:4,		sa[6]=0
+								TS_100KHz		1 0 0 ;		//line:5,		sa[5]=0
+								TS_100KHz		1 1 0 ;		//line:6,		sa[4]=1
+								TS_100KHz		1 1 0 ;		//line:7,		sa[3]=1
+								TS_100KHz		1 0 0 ;		//line:8,		sa[2]=0
+								TS_100KHz		1 1 0 ;		//line:9,		sa[1]=1
+								TS_100KHz		1 0 0 ;		//line:10,		sa[0]=0
+								TS_100KHz		1 0 0 ;		//line:11,		WR_bit=0
+								TS_100KHz		1 L 0 ;		//line:12,		ACK=L
+								TS_100KHz		1 0 0 ;		//line:13,		address[7]=0
+								TS_100KHz		1 0 0 ;		//line:14,		address[6]=0
+								TS_100KHz		1 0 0 ;		//line:15,		address[5]=0
+								TS_100KHz		1 1 0 ;		//line:16,		address[4]=1
+								TS_100KHz		1 1 0 ;		//line:17,		address[3]=1
+								TS_100KHz		1 0 0 ;		//line:18,		address[2]=0
+								TS_100KHz		1 1 0 ;		//line:19,		address[1]=1
+								TS_100KHz		1 0 0 ;		//line:20,		address[0]=0
+								TS_100KHz		1 L 0 ;		//line:21,		ACK=L
+								TS_100KHz		1 1 0 ;		//line:22,		data[7]=1
+								TS_100KHz		1 0 0 ;		//line:23,		data[6]=0
+								TS_100KHz		1 1 0 ;		//line:24,		data[5]=1
+								TS_100KHz		1 0 0 ;		//line:25,		data[4]=0
+								TS_100KHz		1 1 0 ;		//line:26,		data[3]=1
+								TS_100KHz		1 1 0 ;		//line:27,		data[2]=1
+								TS_100KHz		1 1 0 ;		//line:28,		data[1]=1
+								TS_100KHz		1 1 0 ;		//line:29,		data[0]=1
+								TS_100KHz		1 L 0 ;		//line:30,		ACK=L
+								TS_100KHz_Stop		1 0 0 ;		//line:31,		Stop_bit
+								TS_200KHz_Idle		1 1 0 ;		//line:32,		
+repeat(1)						TS_200KHz_Idle		1 1 0 ;		//line:33,		String_read:sa=0x1A,reg=0xA1,data=0xFA
+								TS_200KHz_Start		1 1 0 ;		//line:34,		Start_bit
+								TS_200KHz		1 0 0 ;		//line:35,		sa[6]=0
+								TS_200KHz		1 0 0 ;		//line:36,		sa[5]=0
+								TS_200KHz		1 1 0 ;		//line:37,		sa[4]=1
+								TS_200KHz		1 1 0 ;		//line:38,		sa[3]=1
+								TS_200KHz		1 0 0 ;		//line:39,		sa[2]=0
+								TS_200KHz		1 1 0 ;		//line:40,		sa[1]=1
+								TS_200KHz		1 0 0 ;		//line:41,		sa[0]=0
+								TS_200KHz		1 0 0 ;		//line:42,		WR_bit=0
+								TS_200KHz		1 L 0 ;		//line:43,		ACK=L
+								TS_200KHz		1 1 0 ;		//line:44,		address[7]=1
+								TS_200KHz		1 0 0 ;		//line:45,		address[6]=0
+								TS_200KHz		1 1 0 ;		//line:46,		address[5]=1
+								TS_200KHz		1 0 0 ;		//line:47,		address[4]=0
+								TS_200KHz		1 0 0 ;		//line:48,		address[3]=0
+								TS_200KHz		1 0 0 ;		//line:49,		address[2]=0
+								TS_200KHz		1 0 0 ;		//line:50,		address[1]=0
+								TS_200KHz		1 1 0 ;		//line:51,		address[0]=1
+								TS_200KHz		1 L 0 ;		//line:52,		ACK=L
+								TS_200KHz_Start		1 1 0 ;		//line:53,		Start_bit
+								TS_200KHz		1 0 0 ;		//line:54,		sa[6]=0
+								TS_200KHz		1 0 0 ;		//line:55,		sa[5]=0
+								TS_200KHz		1 1 0 ;		//line:56,		sa[4]=1
+								TS_200KHz		1 1 0 ;		//line:57,		sa[3]=1
+								TS_200KHz		1 0 0 ;		//line:58,		sa[2]=0
+								TS_200KHz		1 1 0 ;		//line:59,		sa[1]=1
+								TS_200KHz		1 0 0 ;		//line:60,		sa[0]=0
+								TS_200KHz		1 1 0 ;		//line:61,		WR_bit=1
+								TS_200KHz		1 L 0 ;		//line:62,		ACK=L
+								TS_200KHz		1 H 0 ;		//line:63,		data[7]=H
+								TS_200KHz		1 H 0 ;		//line:64,		data[6]=H
+								TS_200KHz		1 H 0 ;		//line:65,		data[5]=H
+								TS_200KHz		1 H 0 ;		//line:66,		data[4]=H
+								TS_200KHz		1 H 0 ;		//line:67,		data[3]=H
+								TS_200KHz		1 L 0 ;		//line:68,		data[2]=L
+								TS_200KHz		1 H 0 ;		//line:69,		data[1]=H
+								TS_200KHz		1 L 0 ;		//line:70,		data[0]=L
+								TS_200KHz		1 H 0 ;		//line:71,		NO_ACK=H
+								TS_200KHz_Stop		1 0 0 ;		//line:72,		Stop_bit
+								TS_200KHz_Idle		1 1 0 ;		//line:73,		
+halt								TS_200KHz_Idle		1 1 0 ;		//line:74,		
+}
